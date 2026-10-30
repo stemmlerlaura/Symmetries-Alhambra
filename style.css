@@ -1,0 +1,335 @@
+.site-title {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 900;
+  font-size: 7rem;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+/*  HERO SECTION    */
+
+.hero-scroll {
+  height: 500vh;            /* how long the swap takes; increase to slow it down */
+  position: relative;
+}
+
+.hero {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.hero-intro {
+  --dark: 0;               /* JS: dark overlay amount (0-1) */
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: calc(0.55 * var(--dark));
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 24px 0;
+  opacity: 0;
+  color: #fff;
+}
+
+.hero-slide p {
+  color: inherit;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 62ch;
+  margin: 0 0 1em;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-slide p:last-child { margin-bottom: 0; }
+
+@media (max-width: 700px) {
+  .hero-slide p { font-size: 1rem; line-height: 1.6; }
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: rgb(205, 161, 137);
+  text-align: center;
+}
+
+.article {
+  padding: 90px 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #333;
+  max-width: 65ch;
+  margin: 0 auto 1.2em;
+  text-align: left;
+}
+
+figure {
+  margin: 1em auto;
+  max-width: 1200px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 40%;
+  height: auto;
+}
+
+.math-box {
+  border-left: 4px solid;
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin: 30px auto;
+  max-width: 650px;
+  text-align: left;
+  background: #faf9f7;
+}
+
+.math-box .label {
+  font-family: 'Aref Ruqaa', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.math-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2b2b2b;
+  text-align: left;
+}
+
+.definition {
+  border-color: #1d6f8c;
+  background: #eef6f8;
+}
+.definition .label { color: #1d6f8c; }
+
+.theorem {
+  border-color: #8c3d1d;
+  background: #fbf1ec;
+}
+.theorem .label { color: #8c3d1d; }
+
+.example {
+  border-color: #4a7a28;
+  background: #f2f7ec;
+}
+.example .label { color: #4a7a28; }
+
+.proof {
+  border-color: #6b6b6b;
+  background: #f4f4f2;
+  font-style: italic;
+}
+.proof .label { color: #6b6b6b; }
+
+.proof::after {
+  content: '∎';
+  display: block;
+  text-align: right;
+  font-style: normal;
+  margin-top: 8px;
+}
+
+.contents {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 24px 30px;
+  background: #faf9f7;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.contents h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contents li {
+  margin: 10px 0;
+}
+
+.contents a {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 1.2rem;
+  color: #1d6f8c;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contents a:hover {
+  border-bottom-color: #1d6f8c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-photo {
+  margin: 1.5rem auto 0;
+  opacity: 0;                 /* JS fades this in */
+  transform: translateY(12px);
+  text-align: center;
+}
+
+.hero-photo img {
+  height: min(32vh, 300px);   
+  width: auto;
+  max-width: 90vw;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo figcaption {
+  color: #fff;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0.5em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-media {
+  display: grid;
+  justify-items: center;
+  margin-top: 1.5rem;
+}
+
+.hero-media > * {
+  grid-area: 1 / 1;      /* stack both in the same spot */
+  margin: 0;
+}
+
+.hero-pair {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-pair img {
+  height: min(36vh, 400px);
+  width: auto;
+  max-width: 44vw;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#grid {
+  --bg: #faf9f7;                       /* same as .contents and .math-box */
+  --fine: rgba(140, 61, 29, 0.10);    /* #8c3d1d */
+  --coarse: rgba(140, 61, 29, 0.26);
+  --s: 100px; --x: 0px; --y: 0px; --fade: 80px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 5 / 4;
+  cursor: grab;
+  touch-action: none;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(to right,  var(--coarse) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--coarse) 1px, transparent 1px),
+    linear-gradient(to right,  var(--fine) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--fine) 1px, transparent 1px);
+  background-size:
+    var(--s) var(--s), var(--s) var(--s),
+    calc(var(--s) / 10) calc(var(--s) / 10),
+    calc(var(--s) / 10) calc(var(--s) / 10);
+  background-position: var(--x) var(--y);
+  mask-image:
+    linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+#grid:active { cursor: grabbing; }
