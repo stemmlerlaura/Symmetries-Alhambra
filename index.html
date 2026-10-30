@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Symmetries of the Alhambra</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="hero-scroll">
+            <div class="hero">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="videos/alhambra.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <h1 class="site-title">The Symmetries of the<br>Alhambra</h1>
+                </div>
+                <div class="hero-intro">
+                    <div class="hero-slide">
+                        <p>On a hilltop, against the backdrop of the Sierra Nevada
+                            mountains in Granada, Spain, lies the Alhambra fortress.
+                            This palace is a relic of Islamic rule in Iberia, which 
+                            lasted nearly eight centuries. It stands as the crowning 
+                        achievement of the Nasrid dynasty, and a witness to its fall.</p>
+                    </div>
+                    <div class="hero-slide">
+                        <p>As imposing as the Alhambra is from the outside, as soon as you 
+                            step in, in the words of American writer Washington Irving, you find 
+                            "poetry breathing throughout the fairy architecture of its halls."
+                             Within, finely carved arabesques, calligraphic verses, and 
+                             wonderfully symmetric patterns adorn the walls. The palace's 
+                             artwork has awed its travelers and captivated the minds of many, 
+                             including one obsessive Dutch printmaker.
+                        </p>
+                            <div class="hero-media">
+                                <div class="hero-photo hero-pair" data-reveal="0.2" data-hide="0.5">
+                                    <img src="images/reflecting-pool.JPG" alt="Reflecting pool in the Alhambra">
+                                    <img src="images/Ceiling.jpeg" alt="Alhambra ceiling">
+                                </div>
+                                <figure class="hero-photo" data-reveal="0.5">
+                                    <img src="images/escher_sketches.webp" alt="Escher's sketches of the Alhambra's patterns">
+                                    <figcaption>Escher visited the Alhambra in 1922 and again in 1936, and sketched some of its patterns.</figcaption>
+                                </figure>
+                            </div>
+                    </div>
+                    <div class="hero-slide">
+                        <p>...And mathematicians are no exception...</p>
+                    </div>
+                    <div class="hero-slide">
+                        <p> The Alhambra is a treasure trove of what mathematicians call
+                             <b>wallpaper patterns</b>. These are designs that, in principle, continue forever, and are built from a motif repeated 
+                             along two independent directions. 
+                              What makes them interesting and beautiful are their <b>symmetries</b>!
+                        </p>
+                        <p>
+                            If a group theorist walked into the Alhambra, she might 
+                            be compelled to start sorting its patterns, placing 
+                            two patterns in the same category when they have the same underlying symmetries. 
+                            After sorting for a while, though, a question would naturally arise: just how many categories are there? 
+                        </p>
+
+                            <figure class="hero-photo" data-reveal="0.0">
+                                <img src="images/pajarita.jpg" alt="Pajarita's tiling in the Alhambra">
+                                <figcaption>Pajarita's tiling in the Alhambra.</figcaption>
+                            </figure>
+                    </div>
+                    <div class="hero-slide">
+                        <p>On first considering this question, one might intuitively answer:
+                            "Surely a <i>huge</i> number of categories exist. Perhaps even infinitely many.
+                             After all, artists can get as creative as they like cooking up 
+                             these patterns." But the answer is... 17: every wallpaper pattern 
+                             falls into one of just 17 categories, known formally as the 17 wallpaper groups.</p>
+
+                        <p>And here is what's special about the 
+                             Alhambra: it is claimed to be the <i>only</i> 
+                             place in the world to exhibit examples of all 17 groups. </p>
+                    </div>
+                     <div class="hero-slide">
+                        <p>On this page, we discuss whether the Alhambra really has all 17 groups, and
+                            we explain why it is that
+                             only 17 exist, and not 16 or infinitely many. To do so, we do
+                              not take the traditional algebraic
+                               route (which is how a group theorist might solve
+                                this). Instead, we present the ideas from the 
+                                book “The Symmetries of Things” by mathematicians
+                                 John Conway, Heidi Burgiel, and Chaim Goodman-Strauss, 
+                                 treating these patterns not as flat walls, but as 
+                                 folded-up topological shapes called orbifolds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <figure>
+            <img src="images/Emanuel_Gottlieb_Leutze_-_Columbus_Before_the_Queen.jpg" alt="Columbus presenting his plans to Ferdinand and Isabella">
+            <figcaption>Columbus Before the Queen, 19th-century painting by Emanuel Leutze.
+                <br> After the surrender of Granada in 1492 to the catholic Kings 
+            Ferdinand and Isabella of Spain, the Alhambra became the royal 
+            quarters and property of the Spanish crown. That same year, the 
+            monarchs signed the contract for Christopher Columbus' expedition 
+            across the Atlantic in the Hall of Ambassadors in the Alhambra. 
+            </figcaption>
+        </figure>
+
+        <main class="article">
+             <p>The content is divided into sections. We start by discussing
+                the symmetries of the Euclidean plane. We follow up by learning about a notation 
+                used to describe the symmetries of wallpaper patterns. 
+                After, we learn about how this notation really describes
+                topological orbifolds. We take a detour to learn about surfaces
+                and Euler's Characteristic, and connect it all together when we
+                discuss the <i>Magic Theorem</i> which proves the 17 wallpaper groups. 
+                We present examples from the Alhambra of the 17 group types.
+                We wrap it all up in the conclusion and discuss other curiosities 
+                of the Alhambra. 
+            </p>
+            <nav class="contents">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#symmetry">What is Symmetry?</a></li>
+                    <li><a href="#recognizing_symmetries">Recognizing Symmetries</a></li>
+                    <li><a href="#orbifolds">Orbifolds</a></li>
+                    <li><a href="#surfaces">Surfaces</a></li>
+                    <li><a href="#euler">Euler's Characteristic</a></li>
+                    <li><a href="#magic_theorem">Magic Theorem</a></li>
+                    <li><a href="#17">17 Plane Crystallographic Groups</a></li>
+                    <li><a href="#conclusion">Conclusion &amp Other Curiosities</a></li>
+                    <li><a href="#refs">References</a></li>
+                </ul>
+            </nav>        
+    
+        </main>
+        <script>
+        (function () {
+            const scroller = document.querySelector('.hero-scroll');
+            const title = document.querySelector('.hero-content');
+            const intro = document.querySelector('.hero-intro');
+            const video = document.querySelector('.hero-video');
+            const slides = Array.from(document.querySelectorAll('.hero-slide'));
+            const clamp = (v) => Math.min(1, Math.max(0, v));
+
+            const START = 0.10;
+            const SEG   = (1 - START) / slides.length;
+            const FADE  = 0.04;
+            const PAUSE_AT = START + SEG;
+
+            // pair each photo with its slide, plus when it appears (0-1 across that slide)
+          const photos = slides.map((slide) =>
+                Array.from(slide.querySelectorAll('.hero-photo')).map((el) => ({
+                    el,
+                    at:   parseFloat(el.dataset.reveal || '0.3'),
+                    hide: el.dataset.hide ? parseFloat(el.dataset.hide) : null
+                }))
+            );
+
+            let paused = false;
+
+            function update() {
+                const distance = scroller.offsetHeight - window.innerHeight;
+                const p = clamp(window.scrollY / distance);
+
+                title.style.opacity = 1 - clamp(p / 0.08);
+                intro.style.setProperty('--dark', clamp((p - 0.03) / 0.07));
+
+                slides.forEach((slide, i) => {
+                    const s = START + i * SEG;
+                    const e = s + SEG;
+                    const fadeIn = clamp((p - s) / FADE);
+                    const fadeOut = (i === slides.length - 1) ? 1 : clamp((e - p) / FADE);
+                    slide.style.opacity = Math.min(fadeIn, fadeOut);
+
+                    const local = clamp((p - s) / SEG);
+                    photos[i].forEach((ph) => {
+                        const inAmt  = clamp((local - ph.at) / 0.2);
+                        const outAmt = ph.hide === null ? 0 : clamp((local - ph.hide) / 0.2);
+                        const v = inAmt * (1 - outAmt);
+                        ph.el.style.opacity = v;
+                        ph.el.style.transform = `translateY(${12 * (1 - inAmt)}px)`;
+                    });
+                });
+
+                const shouldPause = p >= PAUSE_AT;
+                if (shouldPause && !paused) {
+                    video.pause();
+                    paused = true;
+                } else if (!shouldPause && paused) {
+                    video.play();
+                    paused = false;
+                }
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+        })();
+        </script>
+        <script>
+        const grid = document.getElementById('grid');
+        const MIN = 80, MAX = 600;            // coarse spacing limits in px (limits the zoom)
+        let s = 100, x = 0, y = 0;            // spacing and pan offset
+
+        function render() {
+        grid.style.setProperty('--s', s + 'px');
+        grid.style.setProperty('--x', x + 'px');
+        grid.style.setProperty('--y', y + 'px');
+        }
+
+        // Drag to pan
+        let dragging = false, lx = 0, ly = 0;
+        grid.addEventListener('pointerdown', e => {
+        dragging = true; lx = e.clientX; ly = e.clientY;
+        grid.setPointerCapture(e.pointerId);
+        });
+        grid.addEventListener('pointermove', e => {
+        if (!dragging) return;
+        x += e.clientX - lx; y += e.clientY - ly;
+        lx = e.clientX; ly = e.clientY;
+        render();
+        });
+        grid.addEventListener('pointerup', () => dragging = false);
+
+        // Scroll to zoom around the cursor
+        grid.addEventListener('wheel', e => {
+        e.preventDefault();
+        const r = grid.getBoundingClientRect();
+        const cx = e.clientX - r.left, cy = e.clientY - r.top;
+        const next = Math.min(MAX, Math.max(MIN, s * Math.exp(-e.deltaY * 0.0015)));
+        const k = next / s;
+        x = cx - (cx - x) * k;              // keep the point under the cursor fixed
+        y = cy - (cy - y) * k;
+        s = next;
+        render();
+        }, { passive: false });
+
+        render();
+        </script>
+    </body>
+</html>
